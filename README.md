@@ -13,21 +13,24 @@ Before running this application, ensure you have the following prerequisites ins
 ## How to Run
 
 1. Build the Docker image:
-    ```bash
-    docker build -t wsapp .
-    ```
+
+   ```bash
+   docker build -t wsapp .
+   ```
 
 2. Run the Docker containers using Docker Compose:
-    ```bash
-    docker-compose up
-    ```
+
+   ```bash
+   docker-compose up
+   ```
 
 3. Open a browser console and execute the following JavaScript code to connect to the WebSocket server:
-    ```javascript
-    let ws = new WebSocket("ws://localhost:8080");
-    ws.onmessage = message => console.log(`Received: ${message.data}`);
-    ws.send("Hello! I'm a client");
-    ```
+
+   ```javascript
+   let ws = new WebSocket("ws://localhost:8080");
+   ws.onmessage = (message) => console.log(`Received: ${message.data}`);
+   ws.send("Hello! I'm a client");
+   ```
 
 4. Open multiple console windows to simulate multiple clients and observe the bidirectional communication in action.
 
@@ -51,5 +54,4 @@ Before running this application, ensure you have the following prerequisites ins
 For further details and insights into the implementation, refer to the following resources:
 
 - GitHub Repository: [https://github.com/Mohamed-Kamal-Ayad/scaling-websockets](https://github.com/Mohamed-Kamal-Ayad/scaling-websockets)
-- Video by Hussein Nasser: [Scaling Websockets - Pub/Sub, Redis, Docker, HAProxy, Node.js](https://www.youtube.com/watch?v=XgFzHXOk8IQ&ab_channel=HusseinNasser)
-
+- Video by Hussein Nasser: [Scaling Websockets - Pub/Sub, Redis, Docker, HAProxy, Node.js](https://www.youtube.com/watch?v=gzIcGhJC8hA&ab_channel=HusseinNasser)
